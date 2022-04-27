@@ -1,0 +1,18 @@
+====Problem1====
+Mean absolute difference for linear interpolation for wavl1:
+ 10.799405940594061
+Mean absolute difference for cubic  interpolation for wavl1:
+ 10.799405940594061
+
+====Problem2,3====
+The reduced chi squared factor for a line is:
+ 20.051881280048104
+The reduced chi squared factor for a quadratic is:
+ 0.9471638813415953
+
+====Problem2,4====
+The reduced chi squared factor for a line is:
+ 1.1754403140411163
+The reduced chi squared factor for a quadratic is:
+ 1.183276000639313
+

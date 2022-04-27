@@ -1,0 +1,142 @@
+Oleksii Kulyk
+PHZ 3150 Project evaluation
+April 29 2019
+Peer Evaluator: Michael Himes
+Total: 168.5/155
+
+
+Are there these files (indicate missing with M, wrong name with W):
+Y  0-phz3150-oleksiy.log
+Y  project_oleksiy.py
+M  project_oleksiy.out -- you should have a file with the output of your code, -1
+Y  a .py file containing supplementary functions
+Y  project_oleksiy_prob3_graph1.png
+Y  project_oleksiy_prob4_graph1.png
+Y  project_oleksiy_prob7_graph1.png
+Y  project_oleksiy_prob8_graph1.png
+Y  project_oleksiy_prob8_graph2.png
+
+N  Are there extra files (~ files or other)?
+
+
+Note that all files handed in, including the directory, should have your username (e.g., project_oleksiy). Since you and others didn't do this, I had 1 directory with a bunch of different peoples' files. -1
+
+
+1. 5/5
+Y  (1) a) Is the airship.py module imported? -- it would be better to explicitly import this in the main file
+Y  (1) b) Is cannon #1337 initialized?
+Y  (1) c) Is Axes3D imported from mpl_toolkits and used to create the `ax` subplot axis object? -- it would be better to explicitly import this in the main file
+Y  (1) d) Is `pos_target` set to (-50, 1.234, 150)?
+Y  (1) e) Is `v_wind` set to (-1.5, -1, 2)?
+
+
+2. 15/15
+Y  (3) Is there a function xycircle() defined in a separate .py file?
+Y  (2) Is there a docstring?
+Y  (2) Does it take inputs center, rad, and res=100?
+Y  (2) Is the circle properly centered on `center`, with all z values equal to the center's z value?
+Y  (1) Does the circle have `res` number of points?
+Y  (1) Does the circle close in on itself (angles 0 to 2pi, inclusive)?
+Y  (2) Is a 2D array returned, shaped as either (3,res) or (res,3)?
+Y  (2) Is the output of xycircle((0, 0, 0), 2, 5) printed?
+
+
+3. 17/20
+Y  (3) Is there a function plotsetup() defined in a separate .py file?
+Y  (2) Is there a docstring?
+Y  (2) Does it take inputs pos_target, ax, rad_cannon=8, and radii_target=(3, 7, 15)? -- uses different default for `radii_target` but it's okay
+Y  (2) Are the z, y, and x axis limits set to +- the maximum of the absolute value of the z and rho coordinates of the target?
+Y  (2) Is a circle of radius `rad_cannon` plotted around the origin using xycircle()?
+Y/N  (3) Is a circle plotted for each radius in `radii_target` centered on `pos_target` (converted to Cartesian coordinates)? -- this only works for 3 values in `radii_target`. the directions requested code that will work for any number of values in `radii_target`. -1
+Y  (2) Is this function used to plot the cannon and target, with at least 2 values for `radii_target`?
+N  (2) Does the plot have a title and axis labels? -- no title or axis labels, -2
+Y  (2) Is the plot saved?
+
+
+4. 39/20
+Y  (3) Is there a function calctrajectory() defined in a separate .py file?
+Y  (2) Is there a docstring?
+Y  (2) Does it take inputs cannon, v_wind, time=10, steps=1000, k=0.003?
+Y  (3) Is the cannon's velocity, theta angle, and phi angle used to calculate the Cartesian components of the velocity?
+Y  (3) Is the Furby's Cartesian coordinates calculated for each point in time?
+Y  (EC: 20) Is wind considered using numerical integration? Is dt (the time step) properly calculated? Is v_af properly calculated at each time step? Are the radius, velocity, and acceleration properly calculated at each time step?
+Y  (2) Is an array of these coordinates returned?
+Y  (2) Is this function used to plot the trajectory for the cannon's initial setup?
+N  (1) Does the plot have a title and axis labels? -- no title or axis labels, -1
+Y  (2) Is the plot saved?
+
+
+5. 10/10
+Y  (2) Is there a function landingpos() defined in a separate .py file?
+Y  (2) Is there a docstring?
+Y  (1) Does it take inputs traj and z_target?
+Y  (1) Does it determine the index of `traj` where the Furby first goes below `z_target`? -- calctrajectory stops calculating at this point, so it uses the last index. clever solution
+Y  (1) Does it use the x and y values of this index to calculate rho, the xy distance from the origin?
+Y  (1) Does it use the x and y values of this index to calculate phi, the aximuthal angle, using arctan2?
+Y  (1) Does it return a tuple of phi and rho, in this order?
+Y  (1) Is this function used to find phi and rho for the trajectory calculated in #4 and print those values?
+
+
+6. 15/15
+Y  (3) Is there a function piditer() defined in a separate .py file?
+Y  (2) Is there a docstring?
+Y  (2) Does it take inputs error, i, dt, kp, ki, and kd?
+Y  (2) Does it correctly calculate P_i?
+Y  (2) Does it correctly calculate I_i?
+Y  (2) Does it correctly calculate D_i?
+Y  (1) Is u_i calculated as the sum of P_i, I_i, and D_i, and is it returned?
+Y  (1) Is the output for piditer(np.arange(10), 5, 1, 1.5, 1.5, 1.5) printed?
+
+7. 39.5/40
+Y  (1) Is there a function pid() defined in a separate .py file?
+Y  (1) Is there a docstring?
+Y  (1) Does it take inputs cannon, ax, pos_target, v_wind=np.zeros(3), steps=50, k_phi=(1.7, 1.5, 0.00125), and k_vel=(0.25, 1.5, 0.005)?
+Y  (1) Are arrays created to hold the error and power values, with 2 rows and `steps` columns?
+Y  (1) Is there a loop that performs parts (a) through (f) `steps` times?
+
+a) 5/5
+Y  (5) Is calc trajectory() used to calculate the trajectory of the Furby?
+
+b) 5/5
+Y  (3) Is the trajectory plotted on `ax`?
+Y  (2) Is the color set to plt.cm.viridis(i/steps)?
+
+c) 5/5
+Y  (5) Is landingpos() used to find the phi and rho position that the Furby landed?
+
+d) 5/5
+Y  (3) Is the error in phi and rho calculated?
+Y  (1) Are the errors inserted into the defined array?
+Y  (1) Is there a check for phi errors > pi or < -pi that appropriately subtracts or adds 2pi?
+
+e) 5/5
+Y  (3) Is piditer() used to calculate the phi and v powers via the error, step number, and k_phi/k_vel? -- good job using scattering and commenting about it
+Y  (1) Does it use the correct dt value (cannon.adjt)?
+Y  (1) Are the powers inserted into the defined array?
+
+f) 5/5
+Y  (5) Is the cannon adjusted using the powers calculated in part (e)?
+
+Y  (1) Does the function return a tuple of the error and power arrays?
+Y  (3) Is this function called using the project's values?
+Y/N  (1) Is the plot of trajectories saved? -- title, axis labels? -0.5
+
+
+8. 10/10
+Y  (2) Is the error array from pid() used to plot the phi and rho errors on one 2D plot?
+Y  (2) Is there a title and axis labels?
+Y  (1) Is the plot saved?
+Y  (2) Is the power array from pid() used to plot the phi and vel powers on one 2D plot?
+Y  (2) Is there a title and axis labels?
+Y  (1) Is the plot saved?
+
+
+9. 10/10
+Y  (5) Is the Git message log printed for all handed in files?
+Y  (5) Is the output copied into the log file?
+
+10. 10/10
+Y  (6) Was a log file submitted?
+Y  (2) Are there commands in the log to create the tar file?
+Y  (2) Was a .tar.gz file submitted on WebCourses?
+

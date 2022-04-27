@@ -1,0 +1,17 @@
+    Mjup_to_MKS = lambda x: Mjup * x # These are labmda-functions for data in .csv file that convert
+    Rjup_to_MKS = lambda x: Rjup * x # measurements from Jovian units to MKS units during input
+    rawdata = np.genfromtxt('exoplanet_eu_catalog.csv', dtype=None, delimiter=',', missing_values={'','nan','inf'}, filling_values=np.nan, names=True, usemask=True, usecols=(0,2,3,4,8,9,10), encoding=None)
+    
+    for i in range(rawdata.shape[0]):
+        if any(rawdata.mask[i]):
+            names = np.delete(names, i, 0)
+            rawdata = np.delete(rawdata, i, 0)
+
+    for i in range(rawdata.shape[0]):
+...     if (any(rawdata.mask[i])):
+...             print("Masked")
+... 
+    for i in range(rawdata.shape[0]):
+        if (any(rawdata.mask[i])):
+            names = np.delete(names, i, 0)
+            rawdata = np.delete(rawdata, i, 0)

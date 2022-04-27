@@ -1,0 +1,42 @@
+====Problem 1 ====
+The graph is being displayed
+The graph was saved as hw11_oleksiy_graphic_1
+
+====Problem 2 ====
+Calling function test_mcint. Docs availible.
+Warning!!! One of the tests uses 10**8 sample points. More explanation in docs.
+All other tests use 10**6 sample points.
+
+Warning! Computation intensive part ahead!
+Press Enter to continue (ctrl+c Enter to exit).
+Running sanity checks for Monte Carlo numerical integrator...
+
+All tests passed!
+
+====Problem 3 ====
+The Monte Carlo numerical integrator is in mcint.py module. Docs for mcint functon are availible.
+
+====Problem 4 ====
+Warning! Computation intensive part ahead! Number of sample points is 10**7.
+Press Enter to continue (ctrl+c Enter to exit).
+Integrating np.sin(x) on [0, 2*pi)
+0.0001664262870718195
+
+Showing that integral of cos(x)dx on 0 to x is equall to sin(x)
+     Monte Carlo       numpy.sin(x)
+x = pi/4:
+ 0.707084546477406 0.7071067811865475
+x = pi/2:
+ 0.9999912335979707 1.0
+x = 3*pi/4:
+ 0.7074942524237676 0.7071067811865476
+x = pi:
+ 0.0008254135942737844 1.2246467991473532e-16
+x = 5*pi/4:
+ -0.7061336169583601 -0.7071067811865475
+x = 3*pi/2:
+ -1.0006557222008858 -1.0
+x = 7*pi/4:
+ -0.707423236116752 -0.7071067811865477
+x = 2*pi:
+ 0.0005392532078844283 -2.4492935982947064e-16

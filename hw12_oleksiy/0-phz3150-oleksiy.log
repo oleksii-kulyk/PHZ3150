@@ -1,0 +1,941 @@
+Oleksii Kulyk
+Log for PHZ 3150, Spring 2019
+
+*****IN: Tue Jan 8 09:10:49 EST 2019
+
+Made a directory for the class here:
+
+/media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150
+
+Opened gedit, started this log, saved as:
+/media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/Oleksii-Kulyk.log
+
+UCF Physics PHZ 3150: Introduction to Numerical Computing
+
+           Name: Oleksii Kulyk
+          Email: oleksii.kulyk@knights.ucf.edu
+	  Phone: 3212952952
+          Major: Physics
+           Year: 2021
+             ID: 4551604
+
+How did you hear about this course?
+Got a reccomendation during one of the physics department meetings.
+Do you have a laptop you can bring to class, install software on, etc.?
+Yes.
+What operating system and version does it run?
+Linux Ubuntu 18.04 LTE. LINUX RULES!!!
+How much free disk space does it have?
+About 700 GB left.
+How much random-access memory (RAM) does it have?
+16 GB
+What operating systems are you comfortable working in?
+Linux (average level), Windows, MACOS
+What computer classes have you taken, including high school,
+extracurricular, etc.?
+Intro to programming. Started programming in PASCAL. Took programming in C and Python in high school. Very little of C# and Visual Studio.
+Have you ever programmed a computer?
+Yes.
+   In what language(s)?
+PASCAL, C, Python, C#, Visual Studio.
+   Summarize your experience:
+At first in was difficult, later I got better. Then, I got much better when I found out I could find tons of documentation online and learn from that. Today I am getting better every day.
+What is the highest math class you have taken?
+CALC 2.
+Have you taken statistics or probability?
+Not yet.
+Why are you taking this course?
+Got a reccomendation, thought if would be fun and helpful.
+Are there particular topics you hope to learn?
+YES! BASH SCRIPTING!
+If you have worked with scientific data or modeling before, briefly
+describe your experience:
+Not really. I assume that processing data for a school project experiment using excel doen't count. I did a little bit of STATISTICA, though.
+Have you ever been involved with a science club or similar?  If so,
+describe:
+UCF SPS!
+
+Created a directory "Books" with path /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/Books
+Downoaded Think Python from: http://greenteapress.com/thinkpython2/thinkpython2.pdf
+
+*****OUT: Tue Jan  8 10:15:28 EST 2019
+
+*****IN: Thu Jan 10 09:02:50 EST 2019
+
+Looked through the alias documentation online and through alias --help.
+Created an alias for IN:
+alias IN="echo -e '\n'*****IN: `date`'\n''\n' >> /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/Oleksii-Kulyk.log" automatically creates a new entry of the form "*****IN <current unix date>" in this log. 
+Created an alies for OUT:
+alias OUT="echo -e '\n'*****OUT: `date`'\n' >> /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/Oleksii-Kulyk.log" automatically creates a new entry of the form "*****OUT <current unix date>" in this log.
+
+Ask about the pointers to pointers in the example program that was shown in this class.
+
+*****OUT: Thu Jan 10 10:07:27 EST 2019
+
+*****IN: Mon Jan 14 16:38:19 EST 2019
+
+Realised that the alias command described above only creates a temporary alias.
+Read some internet. Created permannent aliases in ~/.bash_aliases. That should do it.d
+
+Started HW 2:
+
+Problem 1:
+(a)
+Couldn't find Install Party Survey.
+Remark of the professor: uname -a
+Linux HP-OMEN 4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+Since I have disk space, decided to install Anaconda.
+Went to https://www.anaconda.com/download/#linux and downloaded the Python 3.7 version install script.
+Ran the install script.
+Accepted to initialize Anaconda# in /home/oleksiy/.bashrc
+Accepted the installation of VSCode
+Anaconda does not come with an executable program in Ubuntu. Nothing to run.
+Attaching a screenshot of installation process from Terminal.
+Made a screenshot by pressing PrtSc button.
+Name the screenshot as hw2_oleksiy_prob1_anaconda.png
+
+(b)
+Went to https://www.gnu.org/software/emacs/download.html#gnu-linux
+Followed an advice from a website to install emacs from a distro repository.
+In terminal: sudo apt search emacs
+Returned to many entries
+Went to https://www.admintome.com/blog/install-emacs-26-1-on-ubuntu/
+Decided to stick with downloading the source code from the official site
+Downloaded emacs-26.1.tar.gz from http://mirror.team-cymru.com/gnu/emacs/
+Extracted files from an archive.
+Following INSTALL file from extraced emacs folder.
+Terminal:
+cd ~/Downloads/emacs-26.1
+./configure
+configure: error: The following required libraries were not found:
+    libXpm libjpeg libgif/libungif libtiff gnutls
+Maybe some development libraries/packages are missing?
+If you don't want to link with them give
+    --with-xpm=no --with-jpeg=no --with-gif=no --with-tiff=no --with-gnutls=no
+as options to configure
+Installing the missing libraries with apt:
+sudo apt install libXpm libjpeg libgif/libungif libtiff gnutls
+E: Unable to locate package libXpm
+E: Unable to locate package libjpeg
+E: Unable to locate package libgif
+E: Unable to locate package libtiff
+E: Unable to locate package gnutls
+The missing packges are availible via git. Need to install git first.
+Skipping on to step (c)
+
+(c)
+Gaining access to Unix shell: Ctr+Shift+T. Done!
+Took a screenshot of a Unix shell. Named it hw2_oleksiy_prob1_UnixShell.png
+
+(d)
+sudo apt install -y git
+git status
+fatal: not a git repository (or any of the parent directories): .git
+Took a screenshot of open Terminal. Named it hw2_oleksiy_prob1_UnixShell.png
+Done!
+Returning to step (b). Finishing Step (b).
+
+(b)
+Going back to (d) to set up git.
+
+(d)
+Went to https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04 and read the tutorial
+Decided to configure git later. Maybe emacs will configure without the missing libraries.
+I will install the missing libraries later.
+Going to step (b)
+
+(b)
+./cofigure
+make
+make: *** No targets specified and no makefile found.  Stop.
+Reread the instructions from INSTALL more carefully.
+Found a solution for my case. Following * Image support libraries section from INSTALL
+Went to https://www.x.org/releases/current/src/lib/ and downloaded libXpm-3.5.10
+Unarchived libXpm-3.5.10
+cd /home/oleksiy/Downloads/libXpm-3.5.10
+./configure
+make
+make check
+sudo make install
+Libraries have been installed in:
+   /usr/local/lib
+Installed libXpm!
+Going to http://www.ijg.org/ and downloaded jpeg-9c
+cd ~/Downloads/jpeg-9c
+./configure
+make
+make check
+sudo make install
+Libraries have been installed in:
+   /usr/local/lib
+Installed jpeg-9c!
+Ran out of patiance.
+After some digging on the Internet found a snapshot repository. Read what a snapshot package is.
+OK.
+sudo add-apt-repository ppa:ubuntu-elisp/ppa
+sudo apt update
+sudo apt search emacs
+sudo apt install emacs-snapshot
+Y
+Didn't actually understand what a snapshot package is, but I now have emacs!!!
+This also means that I will have to uninstall everything I installed by hand in this session.
+And on this happy note I end.
+
+*****OUT: Mon Jan 14 21:27:11 EST 2019
+
+*****IN: Mon Jan 14 22:42:27 EST 2019
+
+Started doing Problem 2 of HW 2.
+Started reading ThinkPython
+Installed Spyder
+sudo apt install spyder3
+Still reading ThinkPython
+Ran emacs and took a screenshot, which I named hw2_oleksiy_prob1_emacs.png
+Read the assigned chapter of ThinkPython
+
+HW2:
+Problem 2:
+
+!f y0u c@n read th1s, it m3@ns that you c@n @dap1.
+If you this that can adapt it means, you can read.
+
+Natural languages are not used as programming languages because they are ambiguous, redundant, and idiomatic. Ambuguity makes it often impossible to convey precise scintific concepts and ideas. Redundancy is created as a way to get rid of ambiguity; sometimes redundancy is also added to expand context (artistic descriptions in creative writing). The common use of idioms creates ambuguity and reduces concision.
+
+*****OUT: Mon Jan 14 23:26:50 EST 2019
+
+*****IN: Tue Jan 15 08:59:02 EST 2019
+
+Questions in class:
+When was GNU born?
+Not ever file recovery tools can restore files after rm? How are the files deleted? the disk blocks are linked to a directory. rm removes those links. One file can occupy numerous scattered blocks.
+alias problem with `date`
+How does Linux manage extensions? a program called "file" most file have a identifier at the top.
+How does Linux manage fragmentation? ext4
+ls -l size in what units? Answer: Bytes
+What is a shapshot package?
+
+Memo:
+ls -ltr
+-t list by time from old to new
+-r reverse the sequence
+
+Cut and Paste: Highlight and Middle click
+Emacs notation: M=Alt
+cp -a is the same as cp -dR --preserve-all
+-d from man cp = same as --no-dereference --preserve=links
+
+alias o=xdg-open <file> looks for a program that reads the specifed file and opens the file with it.
+$PATH a list of all directories that the Shell will search for executables. Essentially adding commands to the shell.
+
+
+
+*****OUT: Tue Jan 15 10:24:27 EST 2019
+
+*****IN: Wed Jan 16 16:53:28 EST 2019
+
+After moving my IN alias to .bash_aliases, it returns incorrect date. The date it returns is precisely the date that it was moved to .bash_aliases. Strange, I thought by using `date` in the backquotes I was making the system evaluate date as a unix variable. I will have to ask professor Harrington about this.
+
+Started doing peer reviews. Decided to start with Amanda Cochran. She has a good work, although she didn't have the short explanation why natural languages are not used in the programming. According to rubric, had to take off 2 points for that. She got 58/60 from me. Also, she handed in the uncompressed file e.i. hw2.tar. Wrote a short note with two screenshots on how to use the tar command. Hope it helps.
+
+Moving on to Vijay Stroup.
+Everything is fine with Vijay. Had an wierd example of the first sentence, but, according to rubric, I am not allowed to take off points for wierd examples.
+
+Moving on to Riley Havel.
+Late submission 15 Jan 17:28. Don't know if the professor allowed her to submit late.
+Fine work. Although, the log describes a lot of problems she encountered.
+
+Looks like the work is done for today.
+
+*****OUT Wed Jan 16 17:51:31 EST 2019
+
+*****IN Thu Jan 17 09:12:43 EST 2019
+
+Forgot to sign myself out after the lesson. Only noiced it on Fri Jan 18. The following sign-out time will be approximate.
+
+*****OUT Thu Jan 17 10:15:00 EST 2019
+
+*****IN Fri Jan 18 10:58:53 EST 2019
+
+Noticed that I had named my .log file incorrectly. Changing the name to "0-phz3150-oleksiy.log"
+Also noticed that I had missed the peerevals for the HW1. Did them now.
+
+*****OUT !around! Fri Jan 18 12:00:00 EST 2019
+
+*****IN !around! Sun Jan 20 20:30:00 EST 2019
+
+Forgot to sing out. The sign out time should have been around Fri Jan 18 12:00:00 EST 2019
+Also, didn't sign in when I started doing what is decribed below, but it took me at least 2 hours to complete.
+Uninstalled the jpeg-9c and libXpm-3.5.10 libraries that I installed during HW2 session when I was trying to install emacs.
+Luckily, I simple make uninstall worked. Came across programs called checkinstall, auto-apt, and autodeb while looking for a way to uninstall jpeg-9c and libXpm-3.5.10.
+These programs allow a user to create a .deb package out of a source code of a program in this way making the management of programs installed by hand much easier. Auto-apt also looks and downloads additional packages to satisfy dependencies for a program being installed from source code.
+This means that a simple packet manager like apt or dpkg will be enough to control programs installed from source code.
+All of these programs are relatively new and experimental. Still considering if I should get one, and If yes, then which of them.
+
+Read the link https://stackoverflow.com/questions/7807605/unix-using-date-in-alias-doesnt-output-the-current-date-time sent by Michael Himes.
+Read some manuals on creating aliases with multiple commands.
+By trial and error arrived to ugly but WORKING forms of the IN and OUT aliases described below.
+Changed my aliases for IN and OUT to:
+
+alias IN="echo -en '\n'*****IN:\ >> /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/0-phz3150-oleksiy.log && date >> /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/0-phz3150-oleksiy.log && echo -en '\n' >> /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/0-phz3150-oleksiy.log"
+
+alias OUT="echo -en '\n'*****OUT:\ >> /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/0-phz3150-oleksiy.log && date >> /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/0-phz3150-oleksiy.log && echo -en '\n' >> /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/0-phz3150-oleksiy.log"
+
+*****OUT: Sun Jan 20 22:56:09 EST 2019
+
+*****IN: Mon Jan 21 16:17:10 EST 2019
+
+Started doing HW3:
+
+Started doing "Reading and Study" section.
+Read ThinkPython ch.2
+I will come back to "LearnGit" and "NumRecepies" after I am done with the hand-in part of the homework.
+Part 1:
+Started reading emacs tutorial.
+Got to 40% of the tutorial. Got bored.
+Skipping to Part 2.
+Part 2:
+
+(a)
+cd Spring2019/PHZ3150/handins
+mkdir hw3_oleksiy
+
+(b)
+date
+
+(c)
+Mon Jan 21 20:37:05 EST 2019
+Highlighted the entry in Terminal and pressed the middle button in the editor.
+
+(d)
+cd ..
+ls -l
+
+-rwxrwxrwx 1 root root 13149 Jan 21 20:38 0-phz3150-oleksiy.log
+drwxrwxrwx 1 root root     0 Jan 14 17:17 Books
+drwxrwxrwx 1 root root   376 Jan 21 20:32 handins
+drwxrwxrwx 1 root root  4096 Jan 18 11:07 handouts
+drwxrwxrwx 1 root root  4096 Jan 18 11:13 homework
+drwxrwxrwx 1 root root  4096 Jan 18 11:10 learning
+-rwxrwxrwx 1 root root 10755 Jan 18 13:39 Oleksii-Kulyk.log
+
+cp handins handin #using an alias for cp='cp -ai'
+ls -l handin
+
+total 40
+-rwxrwxrwx 1 root root 13149 Jan 21 20:38 0-phz3150-oleksiy.log
+drwxrwxrwx 1 root root     0 Jan 14 17:17 Books
+drwxrwxrwx 1 root root   376 Jan 21 20:32 handin
+drwxrwxrwx 1 root root   376 Jan 21 20:32 handins
+drwxrwxrwx 1 root root  4096 Jan 18 11:07 handouts
+drwxrwxrwx 1 root root  4096 Jan 18 11:13 homework
+drwxrwxrwx 1 root root  4096 Jan 18 11:10 learning
+-rwxrwxrwx 1 root root 10755 Jan 18 13:39 Oleksii-Kulyk.log
+
+(e)
+cp handin yet-another-name
+ls -l
+
+-rwxrwxrwx 1 root root 13149 Jan 21 20:38 0-phz3150-oleksiy.log
+drwxrwxrwx 1 root root     0 Jan 14 17:17 Books
+drwxrwxrwx 1 root root   376 Jan 21 20:32 handin
+drwxrwxrwx 1 root root   376 Jan 21 20:32 handins
+drwxrwxrwx 1 root root  4096 Jan 18 11:07 handouts
+drwxrwxrwx 1 root root  4096 Jan 18 11:13 homework
+drwxrwxrwx 1 root root  4096 Jan 18 11:10 learning
+-rwxrwxrwx 1 root root 10755 Jan 18 13:39 Oleksii-Kulyk.log
+drwxrwxrwx 1 root root   376 Jan 21 20:32 yet-another-name
+
+(f)
+tar -czf handin.tar.gz handin
+tar -tf handin.tar.gz
+ls -l
+
+handin/
+handin/hw2_oleksiy/
+handin/hw2_oleksiy/hw2_oleksiy_prob1_anaconda.png
+handin/hw2_oleksiy/hw2_oleksiy_prob1_emacs.png
+handin/hw2_oleksiy/hw2_oleksiy_prob1_git-status.png
+handin/hw2_oleksiy/hw2_oleksiy_prob1_UnixShell.png
+handin/hw2_oleksiy/Oleksii-Kulyk.log
+handin/hw2_oleksiy.tar.gz
+handin/hw3_oleksiy/
+
+(g)
+rm {handin,handin.tar.gz,yet-another-name}
+
+rm: descend into directory 'handin'? Y
+rm: descend into directory 'handin/hw2_oleksiy'? Y
+rm: remove regular file 'handin/hw2_oleksiy/hw2_oleksiy_prob1_anaconda.png'? Y
+rm: remove regular file 'handin/hw2_oleksiy/hw2_oleksiy_prob1_emacs.png'? Y
+rm: remove regular file 'handin/hw2_oleksiy/hw2_oleksiy_prob1_git-status.png'? Y
+rm: remove regular file 'handin/hw2_oleksiy/hw2_oleksiy_prob1_UnixShell.png'? Y
+rm: remove regular file 'handin/hw2_oleksiy/Oleksii-Kulyk.log'? Y
+rm: remove directory 'handin/hw2_oleksiy'? Y
+rm: remove regular file 'handin/hw2_oleksiy.tar.gz'? Y
+rm: remove directory 'handin/hw3_oleksiy'? Y
+rm: remove directory 'handin'? Y
+rm: remove regular file 'handin.tar.gz'? Y
+rm: descend into directory 'yet-another-name'? Y
+rm: descend into directory 'yet-another-name/hw2_oleksiy'? Y
+rm: remove regular file 'yet-another-name/hw2_oleksiy/hw2_oleksiy_prob1_anaconda.png'? Y
+rm: remove regular file 'yet-another-name/hw2_oleksiy/hw2_oleksiy_prob1_emacs.png'? Y
+rm: remove regular file 'yet-another-name/hw2_oleksiy/hw2_oleksiy_prob1_git-status.png'? Y
+rm: remove regular file 'yet-another-name/hw2_oleksiy/hw2_oleksiy_prob1_UnixShell.png'? Y
+rm: remove regular file 'yet-another-name/hw2_oleksiy/Oleksii-Kulyk.log'? Y
+rm: remove directory 'yet-another-name/hw2_oleksiy'? Y
+rm: remove regular file 'yet-another-name/hw2_oleksiy.tar.gz'? Y
+rm: remove directory 'yet-another-name/hw3_oleksiy'? Y
+rm: remove directory 'yet-another-name'? Y
+
+(h)
+ls -lR > ./handins/hw3_oleksiy/listing
+
+(i)
+cd homework
+ls -l
+
+total 1298988
+-rwxrwxrwx 1 root root 645922816 Jan 16 15:40 '#Anaconda3-2018.12-Linux-x86_64.sh#'
+-rwxrwxrwx 1 root root 684237703 Jan 14 17:14  Anaconda3-2018.12-Linux-x86_64.sh
+drwxrwxrwx 1 root root         0 Jan 18 10:42  hw1
+drwxrwxrwx 1 root root         0 Jan 16 17:01  hw2
+drwxrwxrwx 1 root root         0 Jan 21 20:28  hw3
+
+(k)
+cat 0-phz3150-oleksiy.log
+
+(l)
+cat 0-phz3150-oleksiy.log | less
+typed "q" to quit
+
+(m)
+
+(n)
+mkdir {1,2}
+rmdir {1,2}
+
+(o)
+touch empty
+rm empty
+
+Part 3:
+
+(a)
+cd ..
+pwd
+
+/home/oleksiy/Spring2019/PHZ3150
+
+ls -l
+
+total 44
+-rwxrwxrwx 1 root root 17004 Jan 21 21:13 0-phz3150-oleksiy.log
+drwxrwxrwx 1 root root     0 Jan 14 17:17 Books
+drwxrwxrwx 1 root root   376 Jan 21 20:32 handins
+drwxrwxrwx 1 root root  4096 Jan 18 11:07 handouts
+drwxrwxrwx 1 root root  4096 Jan 21 21:12 homework
+drwxrwxrwx 1 root root  4096 Jan 18 11:10 learning
+-rwxrwxrwx 1 root root 10755 Jan 18 13:39 Oleksii-Kulyk.log
+
+(b)
+cd /home/oleksiy/MEGASync/GitRepo
+git init
+git config --global user.name "oleksiy"
+git config --global user.email "oleksii.kulyk@knights.ucf.edu"
+git config --global color.ui auto
+git add PHZ3150/
+git commit -m "created my first ever repository"
+
+(c)
+git status
+
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   0-phz3150-oleksiy.log
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../../../.debris/
+	../../../00001.vcf
+	../../../Backup/
+
+	...
+
+touch empty #in ./PHZ3150
+git status
+
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../../../.debris/
+	../../../00001.vcf
+
+	...
+
+git status
+
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   empty
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   0-phz3150-oleksiy.log
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../../../.debris/
+
+	...
+
+git commit -m "created an empty file and eprocedded in keeping the .log file"
+git status
+
+git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   0-phz3150-oleksiy.log
+	modified:   empty
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../../../.debris/
+
+	...
+
+git add 0-phz3150-oleksiy.log empty
+git commit -m "Added some text in the empty file. Recorded this in the log."
+
+git log
+
+commit 4cb50256549c98ecfb5604ab5b1cf2c834ee80ac
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Jan 21 21:44:57 2019 -0500
+
+    Added some text in the empty file. Recorded this in the log.
+
+commit d67c05c88888bd2b446d820cf5c9397a8478db34
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Jan 21 21:41:34 2019 -0500
+
+    created an empty file and eprocedded in keeping the .log file
+
+commit e598536d4dcf524e460a510bf6f4effa9916aa78
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Jan 21 21:35:32 2019 -0500
+
+    went on in creating my .log file while doing hw3
+
+commit 85aaf52c971d11ac82d4f5913b5ac392a2d74987
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Jan 21 21:31:26 2019 -0500
+
+    created my first ever repository
+
+Part 1:
+Went back to reading the emacs manual.
+
+Part 4:
+cp 0-phz3150-oleksiy.log empty handins/hw3_oleksiy/
+cp Emacs.notes ../../handins/hw3_oleksiy/
+cd /home/oleksiy/Spring2019/PHZ3150/handins
+tar -czf hw3_oleksiy.tar.gz hw3_oleksiy/
+
+*****OUT: Mon Jan 21 22:01:28 EST 2019
+
+*****IN: Mon Jan 28 16:04:22 EST 2019
+
+Didn't record the peerevals for hw3 in the log.
+I did two peerevals before.
+Finishing the third peereval for hw3. Vijay Stroup left.
+Finished peerevals for hw3.
+
+*****OUT: Mon Jan 28 16:34:40 EST 2019
+
+*****IN: Tue Jan 29 09:03:56 EST 2019
+
+In class.
+Questions: How to crate a .git directory in a different directory?
+What algorithm is used for check sum? No idea.
+commands like watch don't like to rum in the background. What's wrong?
+Graphic representation of git branches?
+Python functions are Tuples under the hood?!!!
+In shell after you indent, how to unindent? enter.
+
+*****OUT: Tue Jan 29 10:17:09 EST 2019
+
+*****IN: Tue Jan 29 14:08:48 EST 2019
+
+Started doing the reading for hw4.
+Questions:
+
+page 20:
+>>> print(print_lyrics)
+<function print-lyrics at 0xb7e99e9c> is this the address of a function? How is a function stored?
+What are function objects?
+In C, a function must be declared in the beginning, but it can be defined later.
+
+*****OUT
+*****IN
+Forgot to sign out. I spent about 1 hour on reading the 3-rd chapter of ThinkPython during the previous section.
+Continuing hw4. 
+
+***** Now is Wed Jan 30 16:32:50 EST 2019.
+
+Started doing problems:
+
+Created an empty text document.
+cd /home/oleksiy/Spring/home/oleksiy/Spring2019/PHZ3150/hw/handins
+mkdir hw4_oleksiy
+cd hw4_oleksiy
+emacs -f hw4_oleksiy.py &
+Did part 1.
+Did part 2.
+Did part 3.
+Did part 4.
+Did part 5.
+
+*****OUT: Wed Jan 30 18:20:26 EST 2019
+
+*****IN: Wed Jan 30 23:30:34 EST 2019
+
+Back to hw4.
+Finished part 6.
+Finished part 7. For the part 7 I created new functions vPos and vVel and didn't use the function vPosVel from part 4.6 for the convenience.
+Checking the code.
+Imported homework "hw4_oleksiy" as a module by doing.
+import hw4_oleksiy as hw4.
+Testing function drop() from problem 2.
+hw4.drop() returned:
+0.5532833351724881
+Seems reasonable. Moving on.
+Testing Problem 5.
+hw4.hPos(3,-2,2) returned:
+-1. That is correct exactly. Moving on.
+Testing the function in problem 6.
+What I got was the following tuple
+(2.220446049250313e-16, -5.422176684690384)
+The position is pretty much zero. The velocity at impact seems reasonable. Moving on.
+Cheking Problem 7.
+Doing hw4.vecPosVel(hw4.pos, hw4.vel, 2.3) returned
+((-9.971, 18.759999999999998, 7.6), (-16.04, 7.2, 2))
+Doing 
+>>> pos2 = (1.5, 0, 0)
+>>> vel2 = (0, 0, 0)
+>>> hw4.vecPosVel(pos2, vel2, hw4.drop()) returned
+((2.220446049250313e-16, 0.0, 0.0), (-5.422176684690384, 0, 0))
+Cheking with if to see if the position is close to (0, 0, 0) and velocity is close to (-something, 0, 0)
+>>> if ( hw4.vecPosVel(pos2, vel2, hw4.drop()) < ((1e-10,0,0),(0,0,0)) ):
+...     print("YES!")
+... else:
+...     print("NO!")
+... 
+YES!
+Everything works!.
+Putting this under git control.
+cd ../../..
+git add ./*
+git status returned:
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   #Anaconda3-2018.12-Linux-x86_64.sh#
+	modified:   0-phz3150-oleksiy.log
+	new file:   Anaconda3-2018.12-Linux-x86_64.sh
+	new file:   hw/handins/hw2_oleksiy.tar.gz
+	new file:   hw/handins/hw2_oleksiy/Oleksii-Kulyk.log
+	new file:   hw/handins/hw2_oleksiy/hw2_oleksiy_prob1_UnixShell.png
+	new file:   hw/handins/hw2_oleksiy/hw2_oleksiy_prob1_anaconda.png
+(and many other new files)
+
+After I close the log I will do:
+OUT
+git add 0-phz3150-oleksiy.log
+git commit
+cp 0-phz3150-oleksiy.log hw/handins/hw4_oleksiy/
+cd hw/handins
+tar czf hw4_oleksiy.tar hw4_oleksiy
+
+*****OUT: Thu Jan 31 00:55:20 EST 2019
+
+*****IN: Sun Feb  3 23:09:31 EST 2019
+
+Working on peerevals for hw4.
+Forgot to sign in when started. Signed in when doing the third peereval.
+Finished peerevals.
+
+Decided to create the following alias:
+alias open-log='xdg-open /media/oleksiy/MEGASync/Classes/Spring2019/PHZ3150/0-phz3150-oleksiy.log' #Opens log in a text editor.
+
+*****OUT: Sun Feb  3 23:22:17 EST 2019
+
+*****IN: Mon Feb  4 16:20:38 EST 2019
+
+Started HW5:
+
+Doing the reading.
+Reading ThinkPython.
+Reading help(range).
+
+Finished problem 1.
+Finished problem 2.
+Finished problem 3.
+Finished problem 4.
+Adding hw5_oleksiy.py to git.
+Creating an output file for the program:
+python3 hw5_oleksiy.py >> hw5.oleksiy.out
+
+After I close the log I will do:
+OUT
+git add 0-phz3150-oleksiy.log
+git commit
+cp 0-phz3150-oleksiy.log hw/handins/hw5_oleksiy/
+cd hw/handins
+tar czf hw5_oleksiy.tar hw5_oleksiy
+
+*****OUT: Mon Feb 4 21:27:53 EST 2019
+
+*****IN: Mon Feb 11 15:57:40 EST 2019
+
+Started doing HW6:
+Didn't finish homework 6.
+
+*****IN: Sun Feb 17 19:54:46 EST 2019
+
+Started doing HW7:
+
+Problem 1:
+Wrote functions jump and circle_coor in a separate module.
+The function cirle_coor keeps returning a tuple instead of ndarray.
+
+***** Forgot to sign out. Was in until approx Mon Feb 18 01:00:00
+
+*****IN: Mon Feb 18 15:44:08 EST 2019
+
+Did
+$ git add ./*
+$ git commit -m "In the beginning of HW7"
+$ git log
+commit f732daabaf2f5d507e17e36fa52cca6184a778d8 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 18 15:47:26 2019 -0500
+
+    In the beginning of HW7
+
+commit 81375bea11a72e14156d8248de432359dfbc94ea
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 4 21:36:18 2019 -0500
+
+    Another commit after finishing HW5
+
+Second commit:
+commit 29776b6685c4a64234d57fc1787c4cb72ea4fb65 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 18 17:53:38 2019 -0500
+
+    Halfway through the homework
+
+commit f732daabaf2f5d507e17e36fa52cca6184a778d8
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 18 15:47:26 2019 -0500
+
+    In the beginning of HW7
+
+Finished the homework.
+Taking screenshots and wraping up:
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+	modified:   0-phz3150-oleksiy.log
+	deleted:    empty
+	deleted:    hw/handins/hw7_oleksiy/__pycache__/hw7_module.cpython-37.pyc
+	deleted:    hw/handins/hw7_oleksiy/__pycache__/hw7_oleksiy.cpython-37.pyc
+	modified:   hw/handins/hw7_oleksiy/hw7_module.py
+	modified:   hw/handins/hw7_oleksiy/hw7_oleksiy.py
+	modified:   hw/hw4_sol (modified content)
+	modified:   hw/hw5_sol (modified content, untracked content)
+
+The log message:
+commit 42199c7e81dd9c524eba2d584e1d0500bdff8785 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 18 23:23:48 2019 -0500
+
+    The finale of HW7
+
+commit 29776b6685c4a64234d57fc1787c4cb72ea4fb65
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 18 17:53:38 2019 -0500
+
+    Halfway through the homework
+
+commit f732daabaf2f5d507e17e36fa52cca6184a778d8
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 18 15:47:26 2019 -0500
+
+    In the beginning of HW7
+
+
+$ git add ./*
+$ git commit -m "The Finale of HW7"
+$ copied the log into hw7 handin directory
+$ tar fcz hw7_oleksiy.tar.gz hw7_oleksiy
+
+*****OUT: Mon Feb 18 23:26:00 EST 2019
+
+*****IN: Tue Feb 19 09:27:25 EST 2019
+
+Questions:
+
+Can we import homework modules as
+from module import * ? YES
+Two instances of turtle. how to make a default argument for turtle? DEFINITION OF A FUNCTION INITIALIZES A TURTLE INSTANCE
+Is the debian logo an exponential spiral?
+
+*****IN: Thu Feb 21 09:11:01 EST 2019
+
+Pyhton has a notion of raw strings
+str = r"This is the raw string \n \t"
+The spaceholders don't get interpreted. It contains just raw text.
+
+***** Forgot to sign out after class. Doing the home work reading now. date >> Thu Feb 21 15:58:29 EST 2019
+
+*****IN: Sun Feb 24 18:07:59 EST 2019
+
+Started doing HW8:
+Questions about the reading:
+1. From help(str). Why are some methods have to be called str.__method__() and others just str.method. What is the diference and why is there a difference?
+2. Clarify the meaning of the words after 'Returns' in module_template_with_docstring.
+3. 
+
+commit 1757550b10c199f08bf25b6007e4568a4eaffcd4 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Sun Feb 24 21:47:27 2019 -0500
+
+    Finished writing function garden() from the Problem 1
+
+commit c3c5d65e3afe90bf3c7e7a9e293fc1cdcb2ca8c5 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Sun Feb 24 22:47:32 2019 -0500
+
+    Completely finished the first problem.
+
+commit e60ec5082e32e46653ac7b9523cc6d82d84b252f (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 25 22:08:34 2019 -0500
+
+    Finished problem 2
+
+commit 25c5403c321407b958680b0c0787cb7160bc7b92 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Feb 25 23:01:08 2019 -0500
+
+    Finale of HW8
+
+Taring up the homework and submitting it.
+
+$ tar fcz hw8_oleksiy.tar.gz hw8_oleksiy
+
+*****OUT: Mon Feb 25 23:04:34 EST 2019
+
+*****IN: Thu Mar  7 00:55:04 EST 2019
+
+Finished first two problems of HW9
+
+Here's the git message:
+commit a0f05c13196ef3ed68f280f254c63d83a495f86e (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Thu Mar 7 00:58:26 2019 -0500
+
+    Finished first two problems of HW9
+
+Taring up the homework and submitting it.
+
+$ tar fcz hw9_oleksiy.tar.gz hw9_oleksiy
+
+
+*****OUT: Thu Mar  7 00:59:00 EST 2019
+
+*****IN: Sun Mar 17 17:27:25 EDT 2019
+
+Did the reading of ThinkPython chapters 15-19 during spring break.
+Watched the video of lectures 16,17,18.
+Started doing HW10.
+Got to Problem 1 (h).
+Going a commit, adding the log of the commit:
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Sun Mar 17 17:34:27 2019 -0400
+
+    Started HW10. Got to problem1(h)
+
+commit a61393a020fbcc34623a86741f12bd9697b75a23 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Sun Mar 17 21:26:35 2019 -0400
+
+    Completely finished problem1
+
+commit e23108779b3c24e9cc7d1ba674dcda4291449adc (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Mar 18 17:51:02 2019 -0400
+
+    Started and made some progress on problem 2
+
+The measure module is fully functional (at least I think so) and passes all given tests. The exoplanets module has some debugging issues that I don't have the time to figure out. However, the major piece of exoplanet module is correct code.
+
+*****IN: Sat Mar 23 17:54:04 EDT 2019
+
+Did the peerevals.
+Have been doing HW11.
+Finished problem 1.
+
+commit 18630b8c38f5fc3aa841d0e1b3c29e07176d8d77 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Mar 25 21:04:54 2019 -0400
+
+    Finished all normal credit problems
+
+commit e3ee55f8ab89a61cc6dc792c8a64c2e45e02c3e1 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Mon Mar 25 21:53:38 2019 -0400
+
+    Started Extra Credit problems
+
+Taring up the homework and submitting it.
+
+$ tar fcz hw9_oleksiy.tar.gz hw9_oleksiy
+
+*****OUT: Mon Mar 25 22:00:12 EDT 2019
+
+*****IN: Wed Apr  3 23:35:27 EDT 2019
+
+Finished HW12. Here's the log:
+commit 7a66d1aa8ed0411db7e5bbbe8ef6f05318771583 (HEAD -> master)
+Author: oleksiy <oleksii.kulyk@knights.ucf.edu>
+Date:   Wed Apr 3 23:37:51 2019 -0400
+
+    Finished debugging HW12
+
+Finishing up and taring up:
+
+$ tar fcz hw9_oleksiy.tar.gz hw9_oleksiy
+
+*****OUT: Wed Apr  3 23:39:10 EDT 2019
+
